@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  php:
+    build: .
+    ports:
+      - "3100:3100"  # Map port 8080 on the host to port 80 on the container
+    volumes:
+      - ./src:/var/www/html  # Mount the PHP application files into the container
